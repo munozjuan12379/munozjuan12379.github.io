@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Blackjack </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/blackjs.js"></script>
+</head>
+<body onload="showStartTables()">
+<div id="grid-container">
+    <header>
+        <h2> Blackjack </h2>
+        <img src="imgs/allSuites.png" height="30px" alt="logo">
+    </header>
+    <div class="Left">
+        <h2 id="placeBetTxt"> Place your bet</h2>
+        <br />
+        <div id="betStarter">
+            Bet <input type="text" name="bet" id="bet"/>
+            <button type="button" style="background-color: cornflowerblue; border-radius: 12px" class="btn btn-primary" onClick="startGame()">Bet</button>
+        </div>
+        <br>
+        <div id="betMsg" style="display: block"> Enter bet to start </div>
+        <div  id="pTables"></div>
+        <br>
+        <div id="oStat" style="display: none"  >Overall Stats</div>
+        <div id="oTables"></div>
+    </div>
+    <div class="Center">
+        <div id="uCardLabel" style="display: none"> User Cards </div>
+        <img id="bust" src="imgs/busted.png" style="display: none; position: absolute; height: 100px;">
+        <div id="uCards"></div>
+        <img id="userWin" src="imgs/winner.png" style="display: none; height: 50px">
+        <img id="userBlackJack" src="imgs/blackJack.png" style="display: none; height: 80px">
+        <img id="userLoss" src="imgs/looser.png" style="display: none; height: 80px">
+        <span id="userButtons" style="display: none">
+      <button type="button" style="background-color: cornflowerblue; border-radius: 12px;" class="btn btn-primary" onclick="hitAction()">Hit</button>
+      <button type="button" style="background-color: cornflowerblue; border-radius: 12px" class="btn btn-primary" onclick="stickAction()">Stick</button>
+    </span>
+        <br>
+        <br>
+        <div id="dCardLabel" style="display: none"> Dealer Cards </div>
+        <img id="dBust" src="imgs/busted.png" style="display: none; position: absolute; height: 100px;">
+        <div id="dCards"></div>
+        <img id="dealerLoss" src="imgs/looser.png" style="display: none; height: 80px">
+        <img id="dealerWin" src="imgs/winner.png" style="display: none; height: 50px">
+        <img id="dealerBlackJack" src="imgs/blackJack.png" style="display: none; height: 80px">
+        <button id="dealerButton" type="button" style="background-color: cornflowerblue; border-radius: 12px; display: none" class="btn btn-primary" onclick="dealerPlay()">Dealer Play</button>
+    </div>
+    <footer>Game by Juan Munoz - 2023</footer>
+</div>
+</body>
+</html>
